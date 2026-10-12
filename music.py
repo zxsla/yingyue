@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 我的音乐 · TVBox 音乐源（按歌手分类）
-  数据：https://raw.githubusercontent.com/zxsla/yingyue/main/music/music.json
+  数据：https://raw.githubusercontent.com/zxsla/yingyue/main/music.json
   功能：歌手分类 / 封面显示 / 歌词显示 / MV播放
 """
 import json
@@ -12,7 +12,7 @@ try:
 except:
     class BaseSpider: pass
 
-MUSIC_JSON = 'https://raw.githubusercontent.com/zxsla/yingyue/main/music/music.json'
+MUSIC_JSON = 'https://raw.githubusercontent.com/zxsla/yingyue/main/music.json'
 
 class Spider(BaseSpider):
     def getName(self):
