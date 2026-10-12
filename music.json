@@ -1,0 +1,179 @@
+{
+  "singers": [
+    {
+      "name": "Lady Gaga",
+      "songs": [
+        {
+          "name": "嘎嘎",
+          "url": "https://files.catbox.moe/yjarpu.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-00.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-00.lrc"
+        }
+      ]
+    },
+    {
+      "name": "冷漠",
+      "songs": [
+        {
+          "name": "爱如星火",
+          "url": "https://files.catbox.moe/d5bklp.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-01.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-01.txt"
+        }
+      ]
+    },
+    {
+      "name": "徐誉滕",
+      "songs": [
+        {
+          "name": "那一年那一天",
+          "url": "https://files.catbox.moe/fawyem.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-02.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-02.lrc"
+        }
+      ]
+    },
+    {
+      "name": "朴树",
+      "songs": [
+        {
+          "name": "平凡之路",
+          "url": "https://files.catbox.moe/89l1hc.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-03.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-03.lrc"
+        }
+      ]
+    },
+    {
+      "name": "阿鲁阿卓",
+      "songs": [
+        {
+          "name": "相濡以沫",
+          "url": "https://files.catbox.moe/0oluxu.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-04.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-04.lrc"
+        }
+      ]
+    },
+    {
+      "name": "谢天笑",
+      "songs": [
+        {
+          "name": "不会改变",
+          "url": "https://files.catbox.moe/zsgxyr.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-05.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-05.lrc"
+        }
+      ]
+    },
+    {
+      "name": "Green Day",
+      "songs": [
+        {
+          "name": "朋克万岁",
+          "url": "https://files.catbox.moe/k2vbz2.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-06.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-06.lrc"
+        }
+      ]
+    },
+    {
+      "name": "Justin Timberlake",
+      "songs": [
+        {
+          "name": "500公里",
+          "url": "https://files.catbox.moe/gjyhqw.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-07.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-07.lrc"
+        }
+      ]
+    },
+    {
+      "name": "谢霆锋",
+      "songs": [
+        {
+          "name": "罪人",
+          "url": "https://files.catbox.moe/9p209l.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-08.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-08.lrc"
+        }
+      ]
+    },
+    {
+      "name": "许巍",
+      "songs": [
+        {
+          "name": "曾经的你",
+          "url": "https://files.catbox.moe/6nm44r.flac",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-09.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-09.lrc"
+        }
+      ]
+    },
+    {
+      "name": "纪如璟",
+      "songs": [
+        {
+          "name": "空位",
+          "url": "https://streamshare.wireway.ch/download/yt5oyld9",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-10.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-10.lrc"
+        }
+      ]
+    },
+    {
+      "name": "林海",
+      "songs": [
+        {
+          "name": "琵琶语",
+          "url": "https://streamshare.wireway.ch/download/ihpc626a",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-11.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-11.lrc"
+        }
+      ]
+    },
+    {
+      "name": "云朵",
+      "songs": [
+        {
+          "name": "我的楼兰",
+          "url": "https://streamshare.wireway.ch/download/d22upgdc",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-12.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-12.lrc"
+        }
+      ]
+    },
+    {
+      "name": "长渕刚",
+      "songs": [
+        {
+          "name": "肥皂泡",
+          "url": "https://youtu.be/NHXB0ZuhAdA",
+          "type": "mv",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-13.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-13.lrc"
+        },
+        {
+          "name": "蜻蜓",
+          "url": "https://youtu.be/FXUJynObs3U",
+          "type": "mv",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-14.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-14.lrc"
+        }
+      ]
+    }
+  ]
+}
