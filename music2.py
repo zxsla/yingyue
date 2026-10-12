@@ -4,7 +4,6 @@
   单列表 / 歌词正文显示 / 播放列表 / 搜索
   数据：https://raw.githubusercontent.com/zxsla/yingyue/main/music.json
 """
-import re
 import sys
 try:
     from base.spider import Spider as BaseSpider
@@ -36,16 +35,6 @@ class Spider(BaseSpider):
             for i, song in enumerate(s['songs']):
                 out.append((s['name'], i, song))
         return out
-
-    def lyric_text(self, url):
-        try:
-            lr = self.fetch(url, timeout=10)
-            txt = lr.text.strip()
-            txt = re.sub(r'\[\d+:\d+\.\d+\]', '', txt)
-            txt = re.sub(r'\n\s*\n', '\n', txt).strip()
-            return txt
-        except Exception:
-            return ''
 
     def homeContent(self, filter):
         total = len(self.all_songs())
@@ -91,10 +80,8 @@ class Spider(BaseSpider):
             if s['name'] == tid:
                 song = s['songs'][int(idx)]
                 content = f"歌手：{s['name']}"
-                if song.get('lyric'):
-                    txt = self.lyric_text(song['lyric'])
-                    if txt:
-                        content += f"\n\n🎶歌词🎶\n{txt}"
+                if song.get('lyric_text'):
+                    content += f"\n\n🎶歌词🎶\n{song['lyric_text']}"
                 vod = {
                     'vod_id': ids[0],
                     'vod_name': song['name'],
