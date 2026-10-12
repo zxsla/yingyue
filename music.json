@@ -161,17 +161,29 @@
       "songs": [
         {
           "name": "肥皂泡",
-          "url": "https://youtu.be/NHXB0ZuhAdA",
-          "type": "mv",
+          "url": "https://streamshare.wireway.ch/download/khud7gmu",
+          "type": "audio",
           "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-13.jpg",
           "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-13.lrc"
         },
         {
           "name": "蜻蜓",
-          "url": "https://youtu.be/FXUJynObs3U",
-          "type": "mv",
+          "url": "https://streamshare.wireway.ch/download/r12rwwjh",
+          "type": "audio",
           "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-14.jpg",
           "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-14.lrc"
+        }
+      ]
+    },
+    {
+      "name": "M2M",
+      "songs": [
+        {
+          "name": "The Day You Went Away",
+          "url": "https://streamshare.wireway.ch/download/pr0r98vg",
+          "type": "audio",
+          "pic": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-cover-15.jpg",
+          "lyric": "https://raw.githubusercontent.com/zxsla/yingyue/main/music-lrc-15.lrc"
         }
       ]
     }
