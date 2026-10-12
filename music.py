@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-我的音乐 · TVBox 音乐源（全部歌曲单列表）
+我的音乐 · TVBox 音乐源（按歌手分类）
   数据：https://raw.githubusercontent.com/zxsla/yingyue/main/music.json
-  功能：单列表 / 封面显示 / 歌词显示 / MV播放 / 搜索
+  功能：歌手分类 / 封面显示 / 歌词显示 / MV播放
 """
+import json
 import sys
+sys.path.append('..')
 try:
     from base.spider import Spider as BaseSpider
 except:
@@ -28,28 +30,26 @@ class Spider(BaseSpider):
                 self.data = {'singers': []}
         return self.data
 
-    def all_songs(self):
-        d = self.load()
-        out = []
-        for s in d.get('singers', []):
-            for i, song in enumerate(s['songs']):
-                out.append((s['name'], i, song))
-        return out
-
     def homeContent(self, filter):
-        total = len(self.all_songs())
-        return {'class': [{'type_id': 'all', 'type_name': f'🎵全部歌曲({total}首)'}]}
+        d = self.load()
+        classes = [{'type_id': s['name'], 'type_name': f"🎤{s['name']} ({len(s['songs'])}首)"}
+                   for s in d.get('singers', [])]
+        return {'class': classes}
 
     def categoryContent(self, tid, pg, filter, extend):
+        d = self.load()
         lst = []
-        for singer, i, song in self.all_songs():
-            tag = '🎬' if song.get('type') == 'mv' else '🎵'
-            lst.append({
-                'vod_id': f'{singer}@@{i}',
-                'vod_name': f'{tag} {song["name"]}',
-                'vod_pic': song.get('pic', ''),
-                'vod_remarks': singer,
-            })
+        for s in d.get('singers', []):
+            if s['name'] == tid:
+                for i, song in enumerate(s['songs']):
+                    tag = '🎬MV' if song.get('type') == 'mv' else '🎵'
+                    lst.append({
+                        'vod_id': f"{tid}@@{i}",
+                        'vod_name': f"{tag} {song['name']}",
+                        'vod_pic': song.get('pic', ''),
+                        'vod_remarks': s['name'],
+                    })
+                break
         return {'list': lst, 'page': 1, 'pagecount': 1, 'limit': 99, 'total': len(lst)}
 
     def detailContent(self, ids):
@@ -67,25 +67,38 @@ class Spider(BaseSpider):
                     'vod_play_from': '播放',
                     'vod_play_url': f"播放${song['url']}",
                 }
+                # 歌词地址存到 vod_content 供播放器读取
                 if song.get('lyric'):
-                    vod['vod_content'] += f"\n歌词：{song['lyric']}"
+                    try:
+                        lr = self.fetch(song['lyric'], timeout=10)
+                        txt = lr.text.strip()
+                        # 去掉时间轴标签，只留纯文本
+                        import re
+                        txt = re.sub(r'\[\d+:\d+\.\d+\]', '', txt)
+                        txt = re.sub(r'\n\s*\n', '\n', txt).strip()
+                        vod['vod_content'] += f"\n\n🎶歌词🎶\n{txt}"
+                    except Exception:
+                        vod['vod_content'] += f"\n歌词：{song['lyric']}"
                 return {'list': [vod]}
         return {'list': []}
 
     def searchContent(self, key, quick, pg='1'):
+        d = self.load()
         out = []
-        for singer, i, song in self.all_songs():
-            if key.lower() in song['name'].lower() or key.lower() in singer.lower():
-                tag = '🎬' if song.get('type') == 'mv' else '🎵'
-                out.append({
-                    'vod_id': f'{singer}@@{i}',
-                    'vod_name': f'{tag} {song["name"]} - {singer}',
-                    'vod_pic': song.get('pic', ''),
-                    'vod_remarks': singer,
-                })
+        for s in d.get('singers', []):
+            for i, song in enumerate(s['songs']):
+                if key.lower() in song['name'].lower() or key.lower() in s['name'].lower():
+                    tag = '🎬MV' if song.get('type') == 'mv' else '🎵'
+                    out.append({
+                        'vod_id': f"{s['name']}@@{i}",
+                        'vod_name': f"{tag} {song['name']} - {s['name']}",
+                        'vod_pic': song.get('pic', ''),
+                        'vod_remarks': s['name'],
+                    })
         return {'list': out}
 
     def playerContent(self, flag, id, vipFlags):
+        # id 是直链，直接播放；YouTube 链接走解析
         if 'youtu.be' in id or 'youtube.com' in id:
             return {'parse': 1, 'url': id}
         return {'parse': 0, 'url': id}
