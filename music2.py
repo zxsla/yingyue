@@ -46,7 +46,7 @@ class Spider(BaseSpider):
         lst.append({
             'vod_id': 'playlist@@0',
             'vod_name': '📋播放列表(连续播放)',
-            'vod_pic': '',
+            'vod_pic': 'https://raw.githubusercontent.com/zxsla/yingyue/main/playlist-cover.jpg',
             'vod_remarks': f'共{len(self.all_songs())}首',
         })
         for singer, i, song in self.all_songs():
