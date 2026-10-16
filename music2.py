@@ -2,7 +2,7 @@
 """
 我的音乐 · TVBox 音乐源 v2
   单列表 / 歌词正文显示 / 播放列表 / 搜索
-  数据：https://raw.githubusercontent.com/zxsla/yingyue/main/music.json
+  数据：https://cdn.jsdelivr.net/gh/zxsla/yingyue@main/music.json
 """
 import sys
 try:
@@ -10,7 +10,7 @@ try:
 except:
     class BaseSpider: pass
 
-MUSIC_JSON = 'https://raw.githubusercontent.com/zxsla/yingyue/main/music.json'
+MUSIC_JSON = 'https://cdn.jsdelivr.net/gh/zxsla/yingyue@main/music.json'
 
 class Spider(BaseSpider):
     def getName(self):
