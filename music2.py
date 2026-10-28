@@ -10,7 +10,7 @@ try:
 except:
     class BaseSpider: pass
 
-MUSIC_JSON = 'https://cdn.jsdelivr.net/gh/zxsla/yingyue@c3453aa78e4f0e33c6c928eadff01ce0cb4d5e21/music.json'
+MUSIC_JSON = 'https://cdn.jsdelivr.net/gh/zxsla/yingyue@004b6157a0cc90caf186a409e4e6360812375ec9/music.json'
 
 class Spider(BaseSpider):
     def getName(self):
